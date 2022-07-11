@@ -85,16 +85,16 @@
 -type timezone() :: #timezone{}.
 
 -record(fraction, {
-          value :: float(),
-          precision :: precision()
+          value :: float()|undefined,
+          precision :: precision()|undefined
          }
        ).
 -type fraction() :: #fraction{}.
 
 -record(date, {
-          year :: year(),
-          month :: date_field()|'undefined',
-          day :: date_field()|'undefined'
+          year :: year()|undefined,
+          month :: date_field()|undefined,
+          day :: date_field()|undefined
          }
        ).
 -type date() :: #date{}.
@@ -108,11 +108,11 @@
 -type week() :: #week{}.
 
 -record(time, {
-          hour :: time_field(),
-          minute :: time_field()|'undefined',
-          second :: time_field()|'undefined',
-          fraction :: fraction(),
-          timezone :: timezone()
+          hour :: time_field()|undefined,
+          minute :: time_field()|undefined,
+          second :: time_field()|undefined,
+          fraction :: fraction()|undefined,
+          timezone :: timezone()|undefined
          }
        ).
 -type time_record() :: #time{}.
